@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from '../screens/Home';
 import HomeCopy from '../screens/Home copy';
+import PlayVideo from '../screens/VideoPlayer';
 import image1 from '../images/image1.png';
 
 const Stack = createStackNavigator();
@@ -15,7 +16,7 @@ export default function HomeStackRouter(props: any) {
             screenOptions={{
                 headerTintColor: 'white',
                 headerStyle: { backgroundColor: 'tomato' },
-                headerTransparent: true,
+                headerTransparent: false,
                 headerBackground: () => {
                     return (
                         <Image source={image1} style={{ height: 60, width: '100%' }} />
@@ -29,6 +30,7 @@ export default function HomeStackRouter(props: any) {
                     title: 'Home'
                 }} />
             <Stack.Screen name="HomeCopy" component={HomeCopy} />
+            <Stack.Screen name="PlayVideo" component={PlayVideo} />
         </Stack.Navigator>
     );
 }
