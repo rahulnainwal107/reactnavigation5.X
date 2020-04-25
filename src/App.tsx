@@ -7,12 +7,16 @@
  */
 
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
+import DrawerNavigation from './routers/DrawerNavigation';
 import BottomTabRouter from './routers/BottomTabRouter';
 
 const App: () => React$Node = () => {
   return (
-    <BottomTabRouter />
+    <NavigationContainer>
+      <DrawerNavigation />
+    </NavigationContainer>
   );
 };
 
