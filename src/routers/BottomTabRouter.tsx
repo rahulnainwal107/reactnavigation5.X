@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import HomeStackRouter from './HomeStackRouter';
 import ProfileStackRouter from './ProfileStackRouter';
+import TopTabRouter from './TopTabRouter';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,8 @@ export default function BottomTabRouter() {
             iconName = '🏠';
           } else if (route.name === 'Profile') {
             iconName = '🕵️‍♀️';
+          } else if (route.name === 'TopTabRouter') {
+            iconName = '🔝';
           } else {
             iconName = '';
           }
@@ -33,6 +36,7 @@ export default function BottomTabRouter() {
       }}>
       <Tab.Screen name="Home" component={HomeStackRouter} />
       <Tab.Screen name="Profile" component={ProfileStackRouter} />
+      <Tab.Screen name="TopTabRouter" component={TopTabRouter} />
     </Tab.Navigator>
   );
 }
